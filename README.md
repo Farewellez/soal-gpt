@@ -1,1 +1,1 @@
-# soal-gpt
+# soal-gpt untuk latihan python materi Variabel dan Tipe Data
