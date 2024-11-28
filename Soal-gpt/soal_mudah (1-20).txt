@@ -1,0 +1,40 @@
+>Level Mudah (1-20)<
+1. Tipe Data Sederhana: Buatlah sebuah variabel dengan tipe data integer dan beri nilai 10. Tampilkan nilai variabel tersebut.
+
+2. Menggabungkan String: Buat dua variabel string, nama_depan dan nama_belakang. Gabungkan keduanya dan cetak hasilnya.
+
+3. Operasi Aritmatika Dasar: Buat dua variabel integer, lalu hitung hasil penjumlahan, pengurangan, perkalian, dan pembagian dari kedua variabel tersebut.
+
+4. Konversi Tipe Data: Buat variabel dengan nilai 5.5, lalu konversikan menjadi integer dan cetak hasilnya.
+
+5. String Format: Buat variabel nama dan usia, kemudian cetak kalimat seperti ini: "Nama saya [nama], saya berusia [usia] tahun."
+
+6. Menghitung Panjang String: Buat variabel string dan cetak panjang karakter dalam string tersebut.
+
+7. Casting Tipe Data: Buat variabel integer, lalu konversikan ke tipe data float dan string.
+
+8. Mengambil Substring: Buat variabel string, lalu ambil karakter ke-2 hingga ke-5 dari string tersebut.
+
+9. Operasi String Sederhana: Buat string berisi nama buah, ubah ke huruf besar dan huruf kecil, lalu cetak hasilnya.
+
+10. Input User: Minta user untuk menginputkan nama dan usia, lalu tampilkan dengan format "Halo, [nama]! Kamu berusia [usia] tahun."
+
+11. Penjumlahan Input User: Minta user untuk memasukkan dua angka, lalu cetak hasil penjumlahannya.
+
+12. Boolean dan Perbandingan: Buat dua variabel angka, lalu cek apakah angka pertama lebih besar dari angka kedua.
+
+13. Menghitung Sisa Bagi: Buat dua variabel integer, lalu cetak sisa bagi dari pembagian kedua angka tersebut.
+
+14. Perulangan dan Variabel: Buat variabel integer n, lalu cetak "Hello" sebanyak n kali.
+
+15. Menghitung Luas Lingkaran: Buat variabel radius, lalu hitung luas lingkaran dengan rumus πr².
+
+16. Mengecek Tipe Data: Buat variabel dengan berbagai tipe data, lalu cetak tipe data dari setiap variabel.
+
+17. Penjumlahan String Angka: Buat dua variabel string berisi angka (misal: "12" dan "8"), lalu konversikan ke integer dan jumlahkan.
+
+18. Mengecek Apakah String: Buat variabel text, lalu cek apakah text adalah tipe data string.
+
+19. Operasi Logika: Buat dua variabel boolean a dan b, lalu tampilkan hasil dari operasi AND dan OR pada kedua variabel.
+
+20. Indexing String: Buat variabel text berisi "Python", lalu cetak karakter pertama dan terakhir dari text.
