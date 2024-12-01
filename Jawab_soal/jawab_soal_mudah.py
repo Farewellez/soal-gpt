@@ -179,6 +179,10 @@ def no13():
             clear_terminal()
             print("Masukkan hanya angka!!!")
             continue
+        except ZeroDivisionError:
+            clear_terminal()
+            print("Pembagi (input kedua) tidak boleh nol!!!")
+            continue
 # No.14
 def no14():
     while True:
