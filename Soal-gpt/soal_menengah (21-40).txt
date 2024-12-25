@@ -1,0 +1,21 @@
+Level Menengah (21-40)
+21. Menghitung Harga Diskon: Buat variabel harga dan diskon dalam persen, lalu hitung harga akhir setelah diskon.
+22. Menghitung Usia Berdasarkan Tahun Lahir: Minta user untuk menginputkan tahun lahirnya, lalu hitung usianya berdasarkan tahun sekarang.
+23. String Reversal: Buat variabel string, lalu tampilkan string tersebut dalam urutan terbalik.
+24. Penjumlahan Deret Angka: Buat variabel n, lalu hitung jumlah semua angka dari 1 hingga n.
+25. Menghitung Rata-rata: Buat tiga variabel angka, lalu hitung rata-rata dari ketiga angka tersebut.
+26. Konversi Temperatur: Buat variabel celcius, lalu konversikan ke Fahrenheit.
+27. Mengubah Karakter Spesifik di String: Buat string, lalu ganti karakter pertama dengan karakter lain.
+28. Menghitung Jumlah Kata dalam Kalimat: Minta user untuk memasukkan kalimat, lalu hitung jumlah kata dalam kalimat tersebut.
+29. Pembulatan Angka: Buat variabel dengan nilai desimal, lalu tampilkan hasil pembulatan ke atas dan ke bawah.
+30. Mencari Karakter Tertentu dalam String: Buat string, lalu hitung berapa kali sebuah karakter muncul di string tersebut.
+31. Menentukan Bilangan Ganjil/Genap: Buat variabel integer, lalu tentukan apakah bilangan tersebut ganjil atau genap.
+32. Kalkulator Sederhana: Buat program kalkulator yang meminta dua angka dan operator (+, -, *, /) dari user.
+33. Menghitung Nilai Faktorial: Buat variabel n, lalu hitung faktorial dari n.
+34. Mengubah Tipe Data di List: Buat list berisi angka dalam bentuk string, lalu ubah semua elemen menjadi integer.
+35. Menghitung Volume Kubus: Buat variabel sisi, lalu hitung volume kubus.
+36. Konversi Detik ke Jam, Menit, Detik: Buat variabel detik, lalu konversikan ke jam, menit, dan detik.
+37. Perhitungan Uang Kembalian: Buat program untuk menghitung uang kembalian setelah membeli barang.
+38. Palindrome Checker: Buat variabel string, lalu cek apakah string tersebut adalah palindrome.
+39. Konversi Bilangan Desimal ke Biner: Buat variabel integer, lalu tampilkan bilangan tersebut dalam bentuk biner.
+40. Mengurutkan List Angka: Buat list angka, lalu urutkan dari kecil ke besar tanpa menggunakan fungsi sort.
