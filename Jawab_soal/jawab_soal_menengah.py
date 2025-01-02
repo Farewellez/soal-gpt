@@ -124,3 +124,62 @@ def no27():
     output = random_letter + input_user[1::]
     print(f"Karakter pertama dari {input_user} ditukar dengan {random_letter}")
     print(f"Menghasilkan : {output}")
+# No.28
+def no28():
+    clear_terminal()
+    while True:
+        input_user = input("Masukkan sebuah kalimat atau kata random: ")
+        import shlex
+        jumlah_kata = shlex.split(input_user)
+        total_kata = len(jumlah_kata)
+        print(f"Jumlah kata dalam kalimat tersebut adalah {total_kata}")
+        print("Kata yang terdapat dalam kalimat tersebut adalah = ",end="")
+        for i, kata in enumerate(jumlah_kata):
+            if i == total_kata - 1:
+                print(kata)
+            else:
+                print(kata,end=",")
+        print("\nApakah ada yang salah?\nMohon maaf jika ada yang salah, Mungkin system menganggap Sebuah kalimat yang memiliki spasi terhitung sebagai 2 kalimat")
+        print("\nOlehkarena itu jika ada kata yang mengandung spasi namun itu adalah satu kata, contoh:\n bersuka cita = 1 kata (namun mengandung spasi)\n Tolong tambahkan 'bersuka cita' pada input\n Contoh: Aku 'Bersuka Cita' = 2 kata")
+        looping = input("Apakah mau mengulang? [y/n]: ")
+        looping2 = looping.lower() 
+        if looping2 == "y":
+            continue
+        elif looping2 == "n":
+            break
+        else:
+            print("Otomatis mengulang")
+            continue
+    return
+# No.29
+def no29():
+    clear_terminal()
+    import random
+    angka_random = round(random.uniform(-999,999), 2)
+    bulat_kebawah = int(angka_random)
+    bulat_keatas = int(angka_random + 1)
+    print("Angka desimal acak = " + str(angka_random))
+    print(f"\nPembulatan kebawah = {bulat_kebawah}\nPembulatan keatas = {bulat_keatas}")
+    return
+# No.30
+def no30():
+    clear_terminal()
+    acak = "AHBBHBDNANCbbnbkchbadhBFLABDhlfblnjnj3h47398h8fh83n83tZetaahbfhbfbilbrgbzcbvbaubrubugburbgbzjsguorgorosgjZetaayifyoivvofayeyioirg78g47gbf8h2p4hg9834h80h4t0Zetaaaaaaabuibfieyoboybfoeaoyf73i64t618t666403t14t3180t4"
+    print(acak)
+    zeta = acak.count("Zeta")
+    print("\nTebak ada berapa kata Zeta di kalimat itu: ")
+    while True:
+        print("Jangan lupa input angka ya...😸")
+        tebak = int(input("Tebak (Cluenya adalah Farell <3 Zeta): "))
+        match tebak:
+            case 3:
+                clear_terminal()
+                print(f"Yap bener banget jawabannya adalah {zeta}\n3 = <3 Zeta😻")
+                break
+            case _:
+                clear_terminal()
+                print("Yah salah banget! Masa cewe secantik zeta ga keliatan😾")
+                break
+        break
+    return
+
