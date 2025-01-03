@@ -182,4 +182,91 @@ def no30():
                 break
         break
     return
-
+# No.31
+def no31():
+    while True:
+        clear_terminal()
+        try:
+            print("Masukkan sebuah bilangan bulat")
+            print("Ingat ya...Hanya bilangan bulat😾")
+            input_user = int(input("Bilangan bulat: "))
+            break
+        except ValueError:
+            continue
+    if input_user%2 == 0:
+        print(f"{input_user} adalah angka genap")
+    else:
+        print(f"{input_user} adalah angka ganjil")
+    return
+# No.32
+def no32():
+    while True:
+        clear_terminal()
+        try:
+            print("Masukkan sebuah bilangan bulat")
+            print("Ingat ya...Hanya bilangan bulat😾")
+            input_angka = int(input("Input User: "))
+            input_angka2 = int(input("Input angka kedua: "))
+        except ValueError:
+            continue
+        while True:
+            clear_terminal()
+            print("masukkan operasi dari kedua bilangan [ + / - / x / : ]")
+            print("------------------(Masukkan hanya yang ada di dalam pilihan ya!!!😾)------------------")
+            operator = input("Pilih: ")
+            if operator == "+":
+                print(f"{input_angka} + {input_angka2} = {input_angka + input_angka2}")
+            elif operator == "-":
+                print(f"{input_angka} - {input_angka2} = {input_angka - input_angka2}")
+            elif operator == "x":
+                print(f"{input_angka} x {input_angka2} = {input_angka * input_angka2}")
+            elif operator == ":":
+                print(f"{input_angka} : {input_angka2} = {input_angka / input_angka2}")
+            else:
+                continue
+            break
+        break
+    return
+# No.33
+def no33():
+    while True:
+        try:
+            clear_terminal()
+            n = int(input("Masukkan sebuah bilangan bulat: "))
+        except ValueError:
+            continue
+        break
+    print(f"Mengitung faktorial dari {n} = {n}!")
+    angka = 1
+    for i in range(1, n + 1):
+        angka *= i
+    return angka
+# No.34
+def no34():
+    while True:
+        clear_terminal()
+        import random
+        try:        
+            n = int(input("Berapa angka random yang kamu inginkan?\ninput: "))
+        except ValueError:
+            continue
+        break
+    # Membuat list dari inputan user dengan tipe data string
+    list_angka = []
+    for _ in range(n):
+        angka_random = random.randint(-999,999)
+        list_angka.append(str(angka_random))
+    # Proses validasi isi dari list 
+    print(f"Memasukkan {n} angka random (Tipe String) ke dalam list: {list_angka}")
+    # Proses Casting Tipe data string menjadi integer
+    for index, number in enumerate (list_angka):
+        print(str(index + 1) + "." ,number,type(number))
+    print("\nMengubah tipe data menjadi integer: ")
+    cast_number = []
+    for new_number in list_angka:
+        cast_number.append(int(new_number))
+    list_angka.clear()
+    list_angka.extend(cast_number)
+    print(f"list hasil casting: {list_angka}")
+    for new_index,finish in enumerate (list_angka):
+        print(str(new_index + 1) + ".",finish,type(finish))
