@@ -270,3 +270,279 @@ def no34():
     print(f"list hasil casting: {list_angka}")
     for new_index,finish in enumerate (list_angka):
         print(str(new_index + 1) + ".",finish,type(finish))
+# No.35
+def no35():
+    while True:
+        clear_terminal()
+        try:
+            variabel = int(input("Masukkan angka untuk besaran sisi kubus (cm): "))
+        except ValueError:
+            continue
+        break
+    kubus = [
+        "    *-------*",
+        "   /      / | ",
+        "  /      /  |",
+        " *------*   *",
+        " |      |  /",
+        " |      | /",
+        " |      |/ ",
+        " *------*",
+    ]
+    for sisi in kubus:
+        print(sisi)
+    print("\nSisi kubus = " + str(variabel) + " cm")
+    print(f"Jika sisi kubus = {variabel} cm maka:\nVolume kubus = Luas alas x Tinggi = s³\nVolume = {variabel}³ = {variabel**3} cm")
+# No.36
+def no36():
+    import pandas as pd
+    clear_terminal()
+    def detik():
+        while True:
+            try:
+                angka_detik = float(input("Masukkan nominal detik (Gunakan titik untuk desimal): "))
+            except ValueError:
+                continue
+            break
+        tabel_konversi = {
+            "Detik" : [angka_detik],
+            "Menit" : [angka_detik/60],
+            "Jam"   : [angka_detik/3600]
+        }
+        data_detik = pd.DataFrame(tabel_konversi)
+        data_detik.to_csv("Detik.csv", index = False)
+        baca = pd.read_csv("Detik.csv")
+        header = "---------------------------*Conversion Time Table*---------------------------"
+        bottom = "-----------------------------------------------------------------------------"
+        print(header)
+        print(f"{"Detik":<21} {"Menit":<21} {"Jam":<1}")
+        print(bottom)
+        for detik,menit,jam in zip(baca["Detik"], baca["Menit"], baca["Jam"]):
+            print(f"{detik:<21} {menit:<21} {jam:<21}")
+    
+    def menit():
+        while True:
+            try:
+                angka_menit = float(input("Masukkan nominal menit (Gunakan titik untuk desimal): "))
+            except ValueError:
+                continue
+            break
+        tabel_konversi = {
+            "Detik" : [angka_menit*60],
+            "Menit" : [angka_menit],
+            "Jam"   : [angka_menit/60]
+        }
+        data_menit = pd.DataFrame(tabel_konversi)
+        data_menit.to_csv("Menit.csv")
+        baca = pd.read_csv("Menit.csv")
+        header = "---------------------------*Conversion Time Table*---------------------------"
+        bottom = "-----------------------------------------------------------------------------"
+        print(header)
+        print(f"{"Detik":<21} {"Menit":<21} {"Jam":<1}")
+        print(bottom)
+        for detik,menit,jam in zip(baca["Detik"], baca["Menit"], baca["Jam"]):
+            print(f"{detik:<21} {menit:<21} {jam:<21}")
+        return data_menit
+    
+    def jam():
+        while True:
+            try:
+                angka_jam = float(input("Masukkan nominal detik (Gunakan titik untuk desimal): "))
+            except ValueError:
+                continue
+            break
+        tabel_konversi = {
+            "Detik" : [angka_jam*60*60],
+            "Menit" : [angka_jam*60],
+            "Jam"   : [angka_jam]
+        }
+        data_jam = pd.DataFrame(tabel_konversi)
+        data_jam.to_csv("Jam.csv")
+        baca = pd.read_csv("Jam.csv")
+        header = "---------------------------*Conversion Time Table*---------------------------"
+        bottom = "-----------------------------------------------------------------------------"
+        print(header)
+        print(f"{"Detik":<21} {"Menit":<21} {"Jam":<1}")
+        print(bottom)
+        for detik,menit,jam in zip(baca["Detik"], baca["Menit"], baca["Jam"]):
+            print(f"{detik:<21} {menit:<21} {jam:<21}")
+        return data_jam
+    while True:
+        header = "---------------------------*Conversion Time Table*---------------------------"
+        bottom = "-----------------------------------------------------------------------------"
+        print(header)
+        print(f"{"Detik" + " "*21} {"Menit" + " "*21} {"Jam "}")
+        print(bottom)
+        global user_input
+        user_input = int(input("Masukkan pilihan konversi:\n1. Detik\n2. Menit\n3. Jam\nInput: "))
+        match user_input:
+            case 1:
+                clear_terminal()
+                detik()
+            case 2:
+                clear_terminal()
+                menit()
+            case 3:
+                clear_terminal()
+                jam()
+            case _:
+                continue
+        break
+    return
+# No.37
+def no37():
+    import random
+    clear_terminal()
+    pecahan_kembalian = [100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000,500000,1000000]
+    def gaya_tabel():
+        print("-----------------------List Waifu-----------------------")
+        for index, mommy in enumerate(list_waifu):
+            print(f"{str(index + 1) + ".":<4} {mommy:<16} = {harga_waifu[mommy]:<10} Primogems")
+        print("--------------------------------------------------------")
+
+    waifu = "Jean,Lisa,Ningguang,Beidou,Yelan,Venti,Ei,Makoto,Yae Miko,Kujou Sarah,Nahida,Arleccino,Chlorinde,Mavuika,Chitlali"
+    list_waifu = waifu.split(",")
+    harga_waifu = {}
+
+    for mommy in list_waifu:
+        harga_acak = random.randint(0,10000)*500
+        harga_waifu[mommy] = harga_acak
+
+    while True:
+        clear_terminal()
+        gaya_tabel()
+        pilih_waifu = int(input("Pilih Waifumu (Jangan Maruk yah😡): "))
+        if pilih_waifu == 6:
+            waifu_terpilih = list_waifu[pilih_waifu - 1 ]
+            print("\nMas kamu bukan lanang kan?🤨")
+            print(f"Harga {waifu_terpilih} = {harga_waifu[waifu_terpilih]} Primogems")
+            break
+        elif 0 <= pilih_waifu - 1 <= len(list_waifu):
+            waifu_terpilih = list_waifu[pilih_waifu - 1 ]
+            print(f"\nKamu mau membeli {waifu_terpilih}?: ")
+            print(f"Harga {waifu_terpilih} = {harga_waifu[waifu_terpilih]} Primogems")
+            break
+        else:
+            print("Pilih waifu yang ada di list dasar KARBIT!")
+            input("Tekan Enter ")
+            continue
+    while True:
+        primogems = 0
+        try:
+            primo_user = int(input("Masukkan Jumlah Primo yang kamu miliki:"))
+            primogems += primo_user
+            if primogems > harga_waifu[waifu_terpilih]:
+                print(f"Happy Married yah sama {waifu_terpilih}")
+                kembalian = primogems - harga_waifu[waifu_terpilih]
+                print(f"Kembaliannya adalah {kembalian} Primogems")
+                list_pecahan = []
+                for pecahan in sorted(pecahan_kembalian, reverse = True):
+                    while kembalian >= pecahan:
+                        kembalian -= pecahan
+                        list_pecahan.append(pecahan)
+                        break
+                print(f"Kembaliannya pecahan dari {', '.join(map(str,list_pecahan[:-1]))}" + f" dan {list_pecahan[-1]}")
+            elif primogems == harga_waifu[waifu_terpilih]:
+                print(f"\nHappy Married yah sama {waifu_terpilih}")
+                kembalian = primogems - harga_waifu[waifu_terpilih]
+                print(f"Primo saat ini adalah {kembalian} Primogems")
+                break
+            else:
+                print(f"Primogems mu belum mencukupi buat beli {waifu_terpilih}, Nguli dulu yah sayang 😋")
+                break
+        except ValueError:
+            print("Masukkan input dengan benar dan hanya angka")
+            continue
+        return
+# No.38
+def no38():
+    clear_terminal()
+    print("----------------Palindrome Checker----------------")
+    palindrom = str(input("Input sebuah kata atau kalimat: "))
+    palindrom_cek = palindrom.upper()
+    palindrom_cek = palindrom_cek.replace(" ","")
+    revers = palindrom_cek[::-1]
+    # Cara 1
+    if revers  == palindrom_cek:
+        print(f"\nIni adalah Palindrom\n{palindrom[::-1]} = {palindrom}")
+    else:
+        print(f"\nIni bukan Palindrom\n{palindrom[::-1]} != {palindrom}")
+    # Cara 2
+    # terbalik = "".join(reversed(palindrom))
+    # terbalik_cek = terbalik.upper()
+    # terbalik_cek = terbalik_cek.replace(" ","")
+    # if terbalik_cek == palindrom_cek:
+    #     print(f"\nIni adalah Palindrom\n{terbalik} = {palindrom}")
+    # else:
+    #     print(f"Ini bukan Palindrom\n{terbalik} != {palindrom}")
+    # Cara 3
+    # def membalik(text):
+    #     if len(text) == 0:
+    #         return text
+    #     else:
+    #         return membalik(text[1:]) + text[0]
+    # teks_terbalik = membalik(palindrom)
+    # teks_terbalik_cek = teks_terbalik.lower()
+    # teks_terbalik_cek.split(" ")
+    # if teks_terbalik_cek == palindrom_cek:
+    #     print(f"\nIni adalah Palindrom\n{teks_terbalik} = {palindrom}")
+    # else:
+    #     print(f"Ini bukan Palindrom\n{teks_terbalik} != {palindrom}")
+    # Cara 4
+    # kosong = []
+    # membalik = ""
+    # for chara in palindrom:
+    #     kosong.append(chara)
+    # while kosong:
+    #     membalik += kosong.pop()
+    # membalik_cek = membalik.lower()
+    # membalik_cek.split(" ")
+    # if membalik_cek == palindrom_cek:
+    #     print(f"\nIni adalah Palindrom\n{membalik} = {palindrom}")
+    # else:
+    #     print(f"\nIni bukan Palindrom\n{membalik} != {palindrom}")
+# No.39
+def no39():
+    while True:
+        clear_terminal()
+        try:
+            print("-------------------Binarry Conversion-------------------")
+            variabel = input("Masukkan sebuah bilangan (desimal dengan titik): ")
+            if variabel.isdigit():
+                variabel_baru = int(variabel)
+                biner = bin(variabel_baru)
+                print(f"{variabel_baru} memiliki tampilan biner {biner}")
+                break
+            elif "," or "." in variabel:
+                variabel_baru = float(variabel)
+                bulat = round(variabel_baru)
+                biner = bin(bulat)
+                print(f"{variabel_baru} dibulatkan menjadi {bulat} memiliki tampilan biner {biner}")
+                break
+            else:
+                print("Input Hanya angka")
+                input("Tekan Enter ")
+                continue
+        except ValueError:
+            continue
+    return
+# No.40
+def no40():
+    clear_terminal()
+    # Inisiasi Program
+    import random
+    list_angka = []
+    # Menambahkan angka random ke list
+    for _ in range(7):
+        angka_random = random.randint(0,20)
+        list_angka.append(angka_random)
+    print(f"Berikut list angka random yang belum urut\n{list_angka}")
+    # Inisiasi Looping
+    rangew = len(list_angka)
+    for i in range(rangew):
+        # print(i)
+        for j in range(0, rangew -  i - 1):
+            # print(f"{j}")
+            if list_angka[j] > list_angka[j + 1]:
+                list_angka[j], list_angka[j + 1] = list_angka[j + 1], list_angka[j]
+    print(f"\nBerikut adalah list yang sudah urut\n{list_angka}")
