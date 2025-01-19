@@ -1,0 +1,11 @@
+Level Sulit (41-50)
+41.	Menghitung Bilangan Fibonacci: Buat variabel n, lalu hitung bilangan Fibonacci ke-n.
+42.	Mengubah Format Tanggal: Buat variabel tanggal dalam format YYYY-MM-DD, lalu ubah ke format DD-MM-YYYY.
+43.	Mencari Bilangan Terbesar di List: Buat list angka, lalu temukan bilangan terbesar dan terkecil.
+44.	Menghitung Total Kata yang Sama: Buat program yang meminta user memasukkan dua kata, lalu hitung berapa kali kata pertama muncul dalam kata kedua.
+45.	Konversi String ke Title Case: Buat variabel string, lalu ubah menjadi title case (huruf pertama setiap kata kapital).
+46.	Menemukan Huruf Vokal: Buat program untuk menemukan semua huruf vokal dalam sebuah string.
+47.	Validasi Email Sederhana: Buat variabel email, lalu cek apakah email tersebut valid (mengandung karakter @ dan .com).
+48.	Menghitung Bilangan Prima ke-n: Buat variabel n, lalu cari bilangan prima ke-n.
+49.	Membagi List Menjadi Dua Bagian: Buat list dengan elemen genap, lalu bagi menjadi dua list yang sama panjang.
+50.	Cipher Substitusi Sederhana: Buat program yang meminta user memasukkan teks, lalu lakukan enkripsi sederhana dengan mengganti setiap huruf dengan huruf berikutnya di alfabet.
